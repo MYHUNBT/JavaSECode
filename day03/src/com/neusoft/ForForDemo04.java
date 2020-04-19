@@ -9,7 +9,7 @@ package com.neusoft;
 public class ForForDemo04 {
     public static void main(String[] args) {
         for (int i = 0; i <= 23 ; i++) {
-            for (int j = 0; j <= 60; j++) {
+            for (int j = 0; j < 60; j++) {
                 System.out.print(i + "时" + j + "分\t");
             }
             System.out.println();
