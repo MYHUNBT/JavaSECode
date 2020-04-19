@@ -4,7 +4,7 @@ package com.neusoft;
 * continue用来结束本次循环，进行下一次循环
 * */
 
-public class Main {
+public class BreakAndContinueDemo01 {
 
     public static void main(String[] args) {
 	// write your code here
