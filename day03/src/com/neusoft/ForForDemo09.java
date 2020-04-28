@@ -3,6 +3,7 @@ package com.neusoft;
 /**
  * @author liuboting
  * @date 2020/4/19 18:14
+ * 打印99乘法表
  */
 public class ForForDemo09 {
     public static void main(String[] args) {
