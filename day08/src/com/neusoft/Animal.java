@@ -16,4 +16,8 @@ public class Animal implements Livable{
     public void show() {
 
     }
+
+    public void eat(){
+
+    }
 }

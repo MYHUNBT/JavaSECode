@@ -23,4 +23,8 @@ public class Dog extends Animal implements Livable,Pat {
     public void method() {
         System.out.println("Dog");
     }
+
+    public void eat(){
+        System.out.println("吃狗粮");
+    }
 }
