@@ -10,9 +10,10 @@ public class Test {
         Star star = new Star();
         star.shine();
         System.out.println("==============");
-        Star sun = new Sun();
+        Universe sun = new Sun();
         sun.doAnything();
         Sun star1 = (Sun)sun;
         star1.shine();
+
     }
 }

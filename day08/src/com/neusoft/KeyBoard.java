@@ -20,5 +20,4 @@ public class KeyBoard implements USB{
     public void close() {
         System.out.println("键盘关闭");
     }
-
 }

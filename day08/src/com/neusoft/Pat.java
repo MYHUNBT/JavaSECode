@@ -13,5 +13,4 @@ public interface Pat {
     default void method(){
         System.out.println("Pat");
     }
-
 }
