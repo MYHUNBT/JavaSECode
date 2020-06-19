@@ -1,4 +1,4 @@
-package com.neusoft;
+package com.neusoft.homework4;
 
 import java.util.ArrayList;
 
@@ -13,7 +13,7 @@ public class CourseTest {
         Student student2 = new Student("小亮");
         Student student3 = new Student("小明");
         Teacher teacher = new Teacher("张老师");
-        teacher.setStudent(student3);
+        teacher.dianMing(student3);
         ArrayList<Student> students = new ArrayList<Student>();
         students.add(student1);
         students.add(student2);

@@ -1,6 +1,8 @@
-package com.neusoft;
+package com.neusoft.homework4;
 
-import java.util.ArrayList;
+import com.neusoft.homework4.Student;
+import com.neusoft.homework4.Teacher;
+
 import java.util.List;
 
 /**

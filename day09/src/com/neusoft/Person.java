@@ -10,20 +10,21 @@ public class Person {
 
     //创建内部类
     class Heart{
-        public void jump(){
+        public void heartBeat(){
             //直接访问外部成员
             if(live){
-                System.out.println("心在扑通扑通的跳");
+                System.out.println("有心跳");
             }else{
-                System.out.println("over");
+                System.out.println("Game over");
             }
-
         }
     }
     public boolean isLive(){
         return live;
     }
-    public void setLive(boolean live){
+
+    public void setLive(boolean live) {
         this.live = live;
     }
+
 }

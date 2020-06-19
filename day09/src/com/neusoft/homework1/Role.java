@@ -1,4 +1,6 @@
-package com.neusoft;
+package com.neusoft.homework1;
+
+
 
 /**
  * @author liuboting
@@ -56,10 +58,10 @@ public class Role {
         this.ar = ar;
     }
 
-    public void Attack(Weapon wp){
+    public void Attack(){
         System.out.println("使用" + wp.getName() + "，造成了" + wp.getHurt() + "点伤害");
     }
-    public void Wear(Armour ar){
+    public void Wear(){
         System.out.println("穿上了" + ar.getName() + "，增加了" + ar.getProtect() + "点生命值");
     }
 }

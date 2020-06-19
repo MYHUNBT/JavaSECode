@@ -7,12 +7,12 @@ package com.neusoft;
 
 public class InnerDemoTest2 {
     public static void main(String[] args) {
-        FlyAble fly = new FlyAble() {
+        FlyAble f = new FlyAble() {
             @Override
             public void fly() {
                 System.out.println("起飞");
             }
         };
-        fly.fly();
+        f.fly();
     }
 }

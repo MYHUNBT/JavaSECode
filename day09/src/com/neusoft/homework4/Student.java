@@ -1,4 +1,4 @@
-package com.neusoft;
+package com.neusoft.homework4;
 
 /**
  * @author liuboting

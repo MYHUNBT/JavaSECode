@@ -1,4 +1,4 @@
-package com.neusoft;
+package com.neusoft.homework4;
 
 /**
  * @author liuboting
@@ -21,7 +21,7 @@ public class Teacher {
         this.name = name;
     }
 
-    public void setStudent(Student student) {
+    public void dianMing(Student student) {
         this.student = student;
         student.setAttendance(false);
     }

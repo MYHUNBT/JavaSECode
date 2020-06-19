@@ -1,4 +1,7 @@
-package com.neusoft;
+package com.neusoft.homework3;
+
+import com.neusoft.homework3.FaShuSkill;
+import com.neusoft.homework3.WangZheRole;
 
 /**
  * @author liuboting
@@ -9,7 +12,7 @@ public class InnerDemoTest5 {
     public static void main(String[] args) {
         WangZheRole role = new WangZheRole();
 
-        // 设置法术技能
+        // 设置角色法术技能
         role.setFaShuSkill(new FaShuSkill() {
             @Override
             public void faShuAttack() {

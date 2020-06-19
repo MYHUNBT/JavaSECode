@@ -1,4 +1,8 @@
-package com.neusoft;
+package com.neusoft.homework1;
+
+import com.neusoft.homework1.Armour;
+import com.neusoft.homework1.Role;
+import com.neusoft.homework1.Weapon;
 
 /**
  * @author liuboting
@@ -10,8 +14,9 @@ public class GameTest {
         Weapon weapon = new Weapon("M4A1",1314);
         Armour armour = new Armour("三级甲",666);
         Role role = new Role();
-        role.Attack(weapon);
-        role.Wear(armour);
-
+        role.setWp(weapon);
+        role.setAr(armour);
+        role.Attack();
+        role.Wear();
     }
 }
