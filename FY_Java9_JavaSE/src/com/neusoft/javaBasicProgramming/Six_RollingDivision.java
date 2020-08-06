@@ -1,5 +1,8 @@
 package com.neusoft.javaBasicProgramming;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  * @author liuboting
  * @date 2020/8/6 10:37
@@ -9,8 +12,30 @@ package com.neusoft.javaBasicProgramming;
 
 public class Six_RollingDivision {
     public static void main(String[] args) {
-        int m = 56;
-        int n = 48;
-        
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入两个数：");
+        int m = scanner.nextInt();
+        int n = scanner.nextInt();
+        System.out.println(new Six_RollingDivision().showMaxDivisor(m,n));
+        System.out.println(new Six_RollingDivision().showMinMultiple(m,n));
+    }
+    public Integer showMaxDivisor(int m,int n){
+        int maxcomdivisor = 0;
+        for (int i = 1; i < (m>n? n:m)/2 + 1; i++) {
+            if(m%i == 0 && n%i == 0){
+                maxcomdivisor = i;
+            }
+        }
+        return maxcomdivisor;
+    }
+    public Integer showMinMultiple(int m,int n){
+        int mincommultiple = 0;
+        int i = 0;
+        while (true){
+            i++;
+            if(i%m == 0 && i%n==0){
+                return i;
+            }
+        }
     }
 }
