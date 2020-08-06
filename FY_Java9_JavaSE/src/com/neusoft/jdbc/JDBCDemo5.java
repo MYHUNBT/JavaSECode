@@ -1,38 +1,34 @@
 package com.neusoft.jdbc;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 /**
  * @author liuboting
- * @date 2020/8/5 9:15
+ * @date 2020/8/5 9:22
  */
 
-public class JDBCDemo4 {
-    //删除
-    public static void main(String[] args)  {
+public class JDBCDemo5 {
+    //查询
+    public static void main(String[] args) {
         Connection connection = null;
         Statement statement = null;
+        ResultSet resultSet = null;
         try{
             connection = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/java9",
                     "root",
                     "root");
             System.out.println(connection);
-            String sql = "delete from account where id = 4";
             statement = connection.createStatement();
-
-            int count = statement.executeUpdate(sql);
-
-            System.out.println();
-
-            if (count>0){
-                System.out.println("删除成功");
-            }else {
-                System.out.println("删除失败");
+            String sql = "select * from account;";
+            resultSet = statement.executeQuery(sql);
+            while(resultSet.next()){
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                int balance = resultSet.getInt("balance");
+                System.out.println("id: " + id + " name: " + name + " balance: " + balance);
             }
+
         }catch (ClassCastException e){
             e.printStackTrace();
         }catch (SQLException E){
@@ -53,7 +49,13 @@ public class JDBCDemo4 {
                     e.printStackTrace();
                 }
             }
+            if(resultSet != null){
+                try{
+                    resultSet.close();
+                }catch (SQLException e){
+                    e.printStackTrace();
+                }
+            }
         }
-
     }
 }

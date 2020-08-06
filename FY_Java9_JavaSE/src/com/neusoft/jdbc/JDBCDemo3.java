@@ -11,6 +11,7 @@ import java.sql.Statement;
  */
 
 public class JDBCDemo3 {
+    //插入
     public static void main(String[] args)  {
         Connection connection = null;
         Statement statement = null;
