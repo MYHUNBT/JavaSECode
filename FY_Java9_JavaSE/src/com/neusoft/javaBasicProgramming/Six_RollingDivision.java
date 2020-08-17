@@ -16,12 +16,13 @@ public class Six_RollingDivision {
         System.out.println("请输入两个数：");
         int m = scanner.nextInt();
         int n = scanner.nextInt();
-        System.out.println(new Six_RollingDivision().showMaxDivisor(m,n));
-        System.out.println(new Six_RollingDivision().showMinMultiple(m,n));
+        System.out.println(new Six_RollingDivision().showMaxDivisor2(m,n));
+//        System.out.println(new Six_RollingDivision().showMaxDivisor(m,n));
+//        System.out.println(new Six_RollingDivision().showMinMultiple(m,n));
     }
     public Integer showMaxDivisor(int m,int n){
         int maxcomdivisor = 0;
-        for (int i = 1; i < (m>n? n:m)/2 + 1; i++) {
+        for (int i = 1; i <= (m>n? n:m); i++) {
             if(m%i == 0 && n%i == 0){
                 maxcomdivisor = i;
             }
@@ -30,12 +31,21 @@ public class Six_RollingDivision {
     }
     public Integer showMinMultiple(int m,int n){
         int mincommultiple = 0;
-        int i = 0;
         while (true){
-            i++;
-            if(i%m == 0 && i%n==0){
-                return i;
+            mincommultiple++;
+            if(mincommultiple%m == 0 && mincommultiple%n==0){
+                return mincommultiple;
             }
+        }
+    }
+    public Integer showMaxDivisor2(int m,int n){
+        if(m == 0 || n == 0){
+            return m==0? n:m;
+        }
+        if(m>n){
+            return showMaxDivisor2(m%n,n);
+        }else {
+            return showMaxDivisor2(n%m,m);
         }
     }
 }
