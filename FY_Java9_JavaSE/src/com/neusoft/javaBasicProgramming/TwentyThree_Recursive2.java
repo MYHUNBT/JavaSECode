@@ -12,6 +12,12 @@ package com.neusoft.javaBasicProgramming;
 
 public class TwentyThree_Recursive2 {
     public static void main(String[] args) {
-
+        System.out.println(recursive(5));
+    }
+    public static int recursive(int n){
+        if(n == 1){
+            return 10;
+        }
+        return recursive(n-1)+2;
     }
 }

@@ -9,7 +9,7 @@ package com.neusoft.javaBasicProgramming;
 
 public class TwentyOne_Multiplicative {
     public static void main(String[] args) {
-        System.out.println(sumMultiplicative(3));
+        System.out.println(sumMultiplicative(20));
     }
     public static Long multiplicative(int n){
         if(n == 1){
